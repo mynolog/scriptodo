@@ -16,7 +16,7 @@ const getCurrentTime24 = () => {
   const minutes = date.getMinutes();
   const seconds = date.getSeconds();
 
-  clock.innerText = `${hours > 9 ? hours : `0${hours}`}:${minutes}:${seconds > 9 ? seconds : `0${seconds}`}`;
+  clock.innerText = `${hours > 9 ? hours : `0${hours}`}:${minutes > 9 ? minutes : `0${minutes}`}:${seconds > 9 ? seconds : `0${seconds}`}`;
 };
 
 // 12시간 표기 시계 (AM, PM)
@@ -27,7 +27,9 @@ const getCurrentTime12 = () => {
   const seconds = date.getSeconds();
 
   // TODO : 자정일 때 0시로 표시하는 로직 필요
-  clock.innerText = `${hours > 11 ? `PM ${hours - 12}` : `AM 0${hours}`}:${minutes}:${seconds > 9 ? seconds : `0${seconds}`}`;
+  clock.innerText = `${hours > 11 ? `PM ${hours - 12}` : `AM 0${hours}`}:${minutes > 9 ? minutes : `0${minutes}`}:${
+    seconds > 9 ? seconds : `0${seconds}`
+  }`;
 };
 
 // TODO : 24시간 표기 / 12시간 표기 전환 토글 버튼
