@@ -1,3 +1,5 @@
 const app = document.querySelector("#app");
 
-app.innerHTML = "<h1>Hello</h1>";
+app.innerHTML = `
+    <span class="clock">00:00:00</span>
+`;
