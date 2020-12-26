@@ -1,4 +1,6 @@
 const clock = document.querySelector(".clock");
+const toggle = document.querySelector(".toggle-btn");
+let is24hourMode = true;
 
 // TODO : 날짜 표기
 const getCurrentDate = () => {
@@ -36,8 +38,24 @@ const getCurrentTime12 = () => {
 const init = () => {
   setInterval(() => {
     getCurrentDate();
-    getCurrentTime24();
+    if (!is24hourMode) {
+      getCurrentTime12();
+    } else {
+      getCurrentTime24();
+    }
   }, 1000);
 };
+
+const handleToggle = () => {
+  is24hourMode = !is24hourMode;
+  if (!is24hourMode) {
+    toggle.value = "24hour";
+  } else {
+    toggle.value = "12hour";
+  }
+  console.log(is24hourMode);
+};
+
+toggle.addEventListener("click", handleToggle);
 
 init();
