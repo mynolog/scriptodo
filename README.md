@@ -4,6 +4,6 @@
 ## 계획
 - [x] : Clock
 - [ ] : Todo list
-- [ ] : Weather API
+- [x] : Weather API
 - [ ] : Covid-19 API
 - [ ] : Random Background images
