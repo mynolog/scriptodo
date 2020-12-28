@@ -2,7 +2,6 @@ const weather = document.querySelector(".weather");
 const weatherIcon = document.querySelector(".wicon");
 const weatherDescription = document.querySelector(".wdesc");
 
-const API_KEY = "9fad971fc1d3dda623de94b37ff07168";
 const COORDS = "coords";
 
 function getWeather(lat, lon) {
@@ -15,14 +14,12 @@ function getWeather(lat, lon) {
       const temp = Math.round(temperature);
       const city = json.name;
       const country = json.sys.country;
-      const tempMax = json.main.temp_max;
-      const tempMin = json.main.temp_min;
       const iconCode = json.weather[0].icon;
       const iconURI = `http://openweathermap.org/img/w/${iconCode}.png`;
-      const weatherDesc = json.weather[0].description;
+      const weatherDesc = json.weather[0].description.toUpperCase();
       weatherIcon.setAttribute("src", iconURI);
       weatherDescription.innerText = weatherDesc;
-      weather.innerText = `${city}, ${country}의 현재 온도는 ${temp}°C 입니다. 오늘의 최고 기온은 ${tempMax}°C, 최저 기온은 ${tempMin}°C 입니다.`;
+      weather.innerText = `${temp}°C @ ${city}, ${country}`;
     });
 }
 
