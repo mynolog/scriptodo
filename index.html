@@ -4,12 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ScrtipTODO</title>
+    <link rel="stylesheet" href="./src/css/style.css" />
   </head>
   <body>
-    <div id="app"></div>
-    <script src="./app.js"></script>
+    <div id="app">
+      <h1 class="clock">00:00:00</h1>
+      <input type="button" class="clock__toggle-btn" value="AM / PM" />
+
+      <form class="form">
+        <input class="greeting__input" type="text" placeholder="What is your name?" />
+      </form>
+      <span class="greeting__message"></span>
+      <button class="greeting__edit">Edit</button>
+      <button class="greeting__save">Save</button>
+
+      <div class="weather"></div>
+      <div class="weather-status">
+        <img class="weather--icon" src="" alt="Weather Icon" />
+        <span class="weather--description"></span>
+      </div>
+    </div>
     <script src="./env.js"></script>
     <script src="./src/js/clock.js"></script>
+    <script src="./src/js/greeting.js"></script>
     <script src="./src/js/weather.js"></script>
   </body>
 </html>

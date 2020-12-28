@@ -1,6 +1,6 @@
 const weather = document.querySelector(".weather");
-const weatherIcon = document.querySelector(".wicon");
-const weatherDescription = document.querySelector(".wdesc");
+const weatherIcon = document.querySelector(".weather--icon");
+const weatherDescription = document.querySelector(".weather--description");
 
 const COORDS = "coords";
 

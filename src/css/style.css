@@ -1,0 +1,12 @@
+/* @import "https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"; */
+
+.form,
+.greetings,
+.greeting__message,
+.greeting__save {
+  display: none;
+}
+
+.showing {
+  display: block;
+}
