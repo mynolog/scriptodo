@@ -5,5 +5,5 @@
 - [x] : Clock
 - [ ] : Todo list
 - [x] : Weather API
-- [ ] : Covid-19 API
+- [x] : Covid-19 API
 - [ ] : Random Background images
