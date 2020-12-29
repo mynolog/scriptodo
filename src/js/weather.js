@@ -1,6 +1,6 @@
-const weather = document.querySelector(".weather");
+const weather = document.querySelector(".weather--display");
 const weatherIcon = document.querySelector(".weather--icon");
-const weatherDescription = document.querySelector(".weather--description");
+const weatherStatus = document.querySelector(".weather--status");
 
 const COORDS = "coords";
 
@@ -16,9 +16,9 @@ function getWeather(lat, lon) {
       const country = json.sys.country;
       const iconCode = json.weather[0].icon;
       const iconURI = `http://openweathermap.org/img/w/${iconCode}.png`;
-      const weatherDesc = json.weather[0].description.toUpperCase();
+      const weatherDescription = json.weather[0].description.toUpperCase();
       weatherIcon.setAttribute("src", iconURI);
-      weatherDescription.innerText = weatherDesc;
+      weatherStatus.innerText = weatherDescription;
       weather.innerText = `${temp}°C @ ${city}, ${country}`;
     });
 }

@@ -1,8 +1,8 @@
-const form = document.querySelector(".form");
-const input = document.querySelector(".greeting__input");
+const greetingForm = document.querySelector(".greeting__form");
+const greetingInput = document.querySelector(".greeting__input");
 const greetingMsg = document.querySelector(".greeting__message");
-const greetingEdit = document.querySelector(".greeting__edit");
-const greetingSave = document.querySelector(".greeting__save");
+const greetingEdit = document.querySelector(".greeting__btn--edit");
+const greetingSave = document.querySelector(".greeting__btn--save");
 
 const USER_LS = "currentUser";
 const SHOWING_CN = "showing";
@@ -10,19 +10,20 @@ const SHOWING_CN = "showing";
 function handleSubmit(evt) {
   evt.preventDefault();
   greetingSave.classList.remove(SHOWING_CN);
-  const currentValue = input.value;
+  const currentValue = greetingInput.value;
   paintGreeting(currentValue);
   saveName(currentValue);
 }
 
 function askForName() {
-  form.classList.add(SHOWING_CN);
-  form.addEventListener("submit", handleSubmit);
+  greetingForm.classList.add(SHOWING_CN);
+  greetingForm.addEventListener("submit", handleSubmit);
 }
 
 function paintGreeting(text) {
-  form.classList.remove(SHOWING_CN);
+  greetingForm.classList.remove(SHOWING_CN);
   greetingMsg.classList.add(SHOWING_CN);
+  greetingEdit.classList.add(SHOWING_CN);
   greetingMsg.innerText = `Hello ${text}`;
 }
 
@@ -41,7 +42,8 @@ function loadName() {
 
 function editName() {
   const currentUser = localStorage.getItem(USER_LS);
-  input.value = currentUser;
+  greetingInput.focus();
+  greetingInput.value = currentUser;
   greetingMsg.classList.remove(SHOWING_CN);
   greetingSave.classList.add(SHOWING_CN);
   askForName();
