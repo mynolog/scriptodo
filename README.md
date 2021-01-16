@@ -6,4 +6,4 @@
 - [ ] : Todo list
 - [x] : Weather API
 - [x] : Covid-19 API
-- [ ] : Random Background images
+- [x] : Random Background images
