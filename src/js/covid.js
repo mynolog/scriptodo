@@ -1,16 +1,28 @@
 const covid = document.querySelector(".covid");
+const summury = covid.querySelector(".covid--summury");
 
 function getCovid() {
-  fetch(`https://api.covid19api.com/summary`)
-    .then(function (res) {
-      return res.json();
+  fetch("https://covid-193.p.rapidapi.com/statistics?country=S-Korea", {
+    method: "GET",
+    headers: {
+      "x-rapidapi-key": "4a3f424895msh6e9b210d0323fd9p13f1c4jsn63818c9ece13",
+      "x-rapidapi-host": "covid-193.p.rapidapi.com",
+    },
+  })
+    .then(function (response) {
+      return response.json();
     })
     .then(function (json) {
-      const korea = json.Countries[88];
-      const totalConfirmed = korea.TotalConfirmed;
-      const newConfirmed = korea.NewConfirmed;
-      const totalRecovered = korea.TotalRecovered;
-      covid.innerText = `오늘의 Covid-19 현황 : 신규 확진 환자 ${newConfirmed}명, 누적 확진 환자 ${totalConfirmed}명, 격리 해제 ${totalRecovered}명 입니다. 거리두기에 동참해주셔서 감사합니다.`;
+      const res = json.response[0];
+      console.log(res);
+      const date = res.day;
+      const cases = res.cases;
+      const newConfirmed = Number(cases.new.substring(1)).toLocaleString();
+      const totalConfirmed = cases.total.toLocaleString();
+      const recovered = cases.recovered.toLocaleString();
+      summury.innerText = `New Confirmed ${newConfirmed}명 
+                            Total Confirmed ${totalConfirmed}명 
+                            Recovered ${recovered}명`;
     });
 }
 
