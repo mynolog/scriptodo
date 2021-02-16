@@ -5,18 +5,6 @@ body {
   color: #fff;
 }
 
-.form,
-.greetings,
-.greeting__message,
-.greeting__btn--save,
-.greeting__btn--edit {
-  display: none;
-}
-
-.showing {
-  display: block;
-}
-
 @keyframes backgroundFadeIn {
   0% {
     opacity: 0;

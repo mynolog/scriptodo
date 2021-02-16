@@ -2,58 +2,12 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ScrtipTODO</title>
     <link rel="stylesheet" href="./src/css/style.css" />
+    <title>ScripTodo</title>
   </head>
   <body>
-    <div id="container">
-      <header class="header">
-        <div class="weather">
-          <div class="weather__column">
-            <span class="weather--display"></span>
-          </div>
-          <div class="weather__column">
-            <img class="weather--icon" src="" alt="Weather Icon" />
-            <span class="weather--status"></span>
-          </div>
-        </div>
-
-        <div class="covid">
-          <div class="covid__column">
-            <span class="covid--display"></span>
-          </div>
-          <div class="covid__column">
-            <div class="covid--summury"></div>
-          </div>
-        </div>
-      </header>
-
-      <div class="clock">
-        <h1 class="clock__time">00:00:00</h1>
-        <label for="clock__btn">24hour</label>
-        <input type="checkbox" class="clock__btn--toggle" id="clock__btn" />
-        <h2 class="clock__date"></h2>
-      </div>
-
-      <div class="greeting">
-        <form class="form greeting__form">
-          <input class="greeting__input" type="text" placeholder="What is your name?" />
-        </form>
-        <span class="greeting__message"></span>
-        <button class="greeting__btn--edit">Edit</button>
-        <button class="greeting__btn--save">Save</button>
-      </div>
-
-      <div class="todo"></div>
-    </div>
-
-    <script src="./env.js"></script>
-    <script src="./src/js/clock.js"></script>
-    <script src="./src/js/greeting.js"></script>
-    <script src="./src/js/todo.js"></script>
-    <script src="./src/js/weather.js"></script>
     <script src="./src/js/background.js"></script>
-    <script src="./src/js/covid.js"></script>
   </body>
 </html>
