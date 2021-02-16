@@ -2,21 +2,20 @@ const body = document.querySelector("body");
 
 const IMG_NUMBER = 4;
 
-function paintImage(imgNumber) {
+const paintImage = (imgNumber) => {
   const image = new Image();
   image.src = `src/img/${imgNumber}.jpg`;
   image.classList.add("background-image");
   body.prepend(image);
-}
+};
 
-function genRandom() {
+const genRandomNumber = () => {
   const number = Math.ceil(Math.random() * IMG_NUMBER);
   return number;
-}
+};
 
-function init() {
-  const randomNumber = genRandom();
+const init = () => {
+  const randomNumber = genRandomNumber();
   paintImage(randomNumber);
-}
-
+};
 init();
