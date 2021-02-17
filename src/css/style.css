@@ -5,6 +5,15 @@ body {
   color: #fff;
 }
 
+.form,
+.greetings {
+  display: none;
+}
+
+.showing {
+  display: block;
+}
+
 @keyframes backgroundFadeIn {
   0% {
     opacity: 0;

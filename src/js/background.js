@@ -14,8 +14,8 @@ const genRandomNumber = () => {
   return number;
 };
 
-const init = () => {
+const initBackground = () => {
   const randomNumber = genRandomNumber();
   paintImage(randomNumber);
 };
-init();
+initBackground();
