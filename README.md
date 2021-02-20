@@ -7,5 +7,4 @@
 - [x] : Clock
 - [x] : Todo list
 - [ ] : Weather API
-- [ ] : Covid-19 API
 - [x] : Random Background images

@@ -38,13 +38,18 @@ const paintToDo = (text) => {
   };
   toDos.push(toDoObj);
   saveToDos();
+  toDoInput.placeholder = "Write a to do";
 };
 
 const handleSubmitToDo = (e) => {
   e.preventDefault();
   const currentValue = toDoInput.value;
-  paintToDo(currentValue);
-  toDoInput.value = "";
+  if (currentValue !== "") {
+    paintToDo(currentValue);
+    toDoInput.value = "";
+  } else {
+    toDoInput.placeholder = "할 일을 입력하세요!";
+  }
 };
 
 const loadToDos = () => {
