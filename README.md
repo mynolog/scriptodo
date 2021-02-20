@@ -6,5 +6,6 @@
 
 - [x] : Clock
 - [x] : Todo list
-- [ ] : Weather API
+- [x] : Weather API
 - [x] : Random Background images
+- [ ] : 스타일 완성
