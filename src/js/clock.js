@@ -9,8 +9,9 @@ let is24HoursClock;
 const loadClockMode = () => {
   const is24HourMode = JSON.parse(localStorage.getItem(CLOCK_MODE_LS));
   if (is24HourMode === null) {
+    // 기본값 : 24시간 시계 모드
     clockMode.checked = true;
-    return (is24Hours = true);
+    return (is24HoursClock = true);
   } else {
     clockMode.checked = is24HourMode;
     return (is24HoursClock = is24HourMode);
