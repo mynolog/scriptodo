@@ -17,7 +17,7 @@
     <header class="header">
       <div class="weather">
         <div class="weather__column active">
-          <button class="weather__active-button">
+          <button class="weather__active-button" title="Click to get current weather">
             <i class="fas fa-map-marker-alt"></i>
           </button>
           <span class="weather__active-text">Get current weather</span>
@@ -29,7 +29,8 @@
     <main class="main">
       <div class="js-clock">
         <h1>00:00</h1>
-        <input type="checkbox" class="js-clock-mode" /> 24 Hours
+        <input type="checkbox" class="js-clock-mode" id="clock-mode" />
+        <label for="clock-mode">24 Hours</label>
         <h2></h2>
       </div>
 

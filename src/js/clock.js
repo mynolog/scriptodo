@@ -7,13 +7,13 @@ const CLOCK_MODE_LS = "is24Hours";
 let is24HoursClock;
 
 const loadClockMode = () => {
-  const is24HourMode = JSON.parse(localStorage.getItem(CLOCK_MODE_LS));
-  if (is24HourMode === null) {
+  is24HoursClock = JSON.parse(localStorage.getItem(CLOCK_MODE_LS));
+  if (is24HoursClock === null) {
     clockMode.checked = true;
-    return (is24Hours = true);
+    return is24HoursClock;
   } else {
-    clockMode.checked = is24HourMode;
-    return (is24HoursClock = is24HourMode);
+    clockMode.checked = is24HoursClock;
+    return is24HoursClock;
   }
 };
 
@@ -39,22 +39,24 @@ const getCurrentTime = () => {
 };
 
 const getCurrentDate = () => {
-  const date = new Date();
-  const year = date.getFullYear();
-  const month = date.getMonth();
-  const currentDate = date.getDate();
-  const day = date.getDay();
+  const currentDate = new Date();
+  const year = currentDate.getFullYear();
+  const month = currentDate.getMonth();
+  const date = currentDate.getDate();
+  const day = currentDate.getDay();
   const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  dateTitle.innerText = `${days[day]}, ${months[month]} ${currentDate}, ${year}`;
+  dateTitle.innerText = `${days[day]}, ${months[month]} ${date}, ${year}`;
 };
 
 clockMode.addEventListener("click", handleClockMode);
 
 const initClock = () => {
   loadClockMode();
-  setInterval(getCurrentTime, 1000);
-  getCurrentDate();
+  setInterval(() => {
+    getCurrentTime();
+    getCurrentDate();
+  }, 1000);
 };
 
 initClock();
