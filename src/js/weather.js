@@ -15,7 +15,8 @@ const getCurrentWeather = (lat, lon) => {
       const city = json.name;
       const country = json.sys.country;
       currentWeather.innerText = `${temperture}°C, ${descCapitalized} @${city}, ${country}`;
-    });
+    })
+    .catch((err) => console.log(err));
 };
 
 const saveLocation = (lat, lon) => {

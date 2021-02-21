@@ -34,7 +34,9 @@ const getCurrentTime = () => {
   if (is24HoursClock) {
     clockTitle.innerText = `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
   } else {
-    clockTitle.innerText = `${hours > 11 ? `PM ${hours - 12}` : `AM ${hours}`}:${minutes}:${seconds > 9 ? seconds : `0${seconds}`}`;
+    clockTitle.innerText = `${hours > 11 ? `PM ${hours - 12}` : `AM ${hours}`}:${minutes < 10 ? `0${minutes}` : minutes}:${
+      seconds > 9 ? seconds : `0${seconds}`
+    }`;
   }
 };
 
