@@ -44,13 +44,12 @@ const getCurrentTime = () => {
 
 const getCurrentDate = () => {
   const currentDate = new Date();
-  const year = currentDate.getFullYear();
   const month = currentDate.getMonth();
   const date = currentDate.getDate();
   const day = currentDate.getDay();
   const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  dateTitle.innerText = `${days[day]}, ${months[month]} ${date}, ${year}`;
+  dateTitle.innerText = `${days[day]}, ${months[month]} ${date}`;
 };
 
 clockMode.addEventListener("click", handleClockMode);

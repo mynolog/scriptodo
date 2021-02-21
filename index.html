@@ -24,18 +24,25 @@
         </div>
         <div class="weather__column display"></div>
       </div>
-      <div class="covid-19"></div>
+
+      <div class="js-clock clock">
+        <div class="clock-options">
+          <input type="checkbox" class="js-clock-mode clock-switch" id="clock-mode" />
+          <label for="clock-mode">24 Hours</label>
+        </div>
+        <div class="clock-main">
+          <div class="clock-main__column">
+            <h1 class="js-clock-title clock-title">00:00</h1>
+          </div>
+          <div class="clock-main__column">
+            <h2 class="js-clock-second clock-second">00</h2>
+            <h2 class="js-clock-subtitle clock-subtitle"></h2>
+          </div>
+        </div>
+        <h3 class="date-title"></h3>
+      </div>
     </header>
     <main class="main">
-      <div class="js-clock">
-        <h1 class="js-clock-title">00:00</h1>
-        <h2 class="js-clock-second">00</h2>
-        <h2 class="js-clock-subtitle"></h2>
-        <input type="checkbox" class="js-clock-mode" id="clock-mode" />
-        <label for="clock-mode">24 Hours</label>
-        <h3></h3>
-      </div>
-
       <form class="js-form form">
         <input type="text" placeholder="What is your name?" />
       </form>
