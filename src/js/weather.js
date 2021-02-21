@@ -10,10 +10,10 @@ const getCurrentWeather = (lat, lon) => {
     .then((res) => res.json())
     .then((json) => {
       const temperture = Math.round(json.main.temp);
-      const description = json.weather[0].description;
-      const city = json.name;
+      const description = json.weather[0].description.toUpperCase();
+      const city = json.name.toUpperCase();
       const country = json.sys.country;
-      currentWeather.innerText = `${temperture}°C, ${description} @${city}, ${country}`;
+      currentWeather.innerText = `${temperture}° ${description} @ ${city}, ${country}`;
     })
     .catch((err) => console.log(err));
 };

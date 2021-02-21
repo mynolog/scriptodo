@@ -1,6 +1,11 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css";
 @import url("https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap");
 @import "./header.css";
+@import "./main.css";
+
+::placeholder {
+  color: #fff;
+}
 
 body {
   font-family: "Yeon Sung", cursive;
@@ -10,10 +15,10 @@ body {
   box-sizing: border-box;
   overflow: hidden;
   display: grid;
-  grid-template-rows: 30% auto;
+  grid-template-rows: 25% auto;
 }
 
-.form,
+.name-form,
 .greetings {
   display: none;
 }

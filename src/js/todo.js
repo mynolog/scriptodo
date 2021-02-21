@@ -36,8 +36,13 @@ const paintToDo = (text) => {
     text,
     id: newId,
   };
-  toDos.push(toDoObj);
-  saveToDos();
+  if (toDos.length < 7) {
+    console.log(toDos.length);
+    toDos.push(toDoObj);
+    saveToDos();
+  } else {
+    alert("욕심쟁이");
+  }
   toDoInput.placeholder = "Write a to do";
 };
 

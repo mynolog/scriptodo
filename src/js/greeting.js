@@ -1,5 +1,5 @@
-const form = document.querySelector(".js-form");
-const input = form.querySelector("input");
+const nameForm = document.querySelector(".js-nameForm");
+const input = nameForm.querySelector("input");
 const greeting = document.querySelector(".js-greetings");
 
 const USER_LS = "currentUser";
@@ -17,12 +17,12 @@ const handleSubmit = (e) => {
 };
 
 const askName = () => {
-  form.classList.add(SHOWING);
-  form.addEventListener("submit", handleSubmit);
+  nameForm.classList.add(SHOWING);
+  nameForm.addEventListener("submit", handleSubmit);
 };
 
 const paintGreeting = (userName) => {
-  form.classList.remove(SHOWING);
+  nameForm.classList.remove(SHOWING);
   greeting.classList.add(SHOWING);
   greeting.innerText = `Hello ${userName}`;
 };

@@ -1,0 +1,78 @@
+.main {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr) 4fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.name-form,
+.greeting,
+.todo-form,
+.todo-list {
+  grid-column: 2 / 3;
+}
+
+.name-form,
+.greeting {
+  grid-row: 1 / 2;
+}
+
+.greeting {
+  font-size: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.name-form,
+.todo-form {
+  width: 100%;
+  height: 70%;
+}
+.name-input,
+.todo-input {
+  all: unset;
+  font-family: "Yeon Sung", cursive;
+  width: 100%;
+  height: 100%;
+  text-indent: 10px;
+  font-size: 25px;
+  text-align: center;
+}
+.name-input:focus,
+.todo-input:focus {
+  background-color: black;
+  opacity: 0.3;
+}
+
+.todo-form {
+  grid-row: 2 / 3;
+}
+
+.todo-list {
+  width: 65%;
+  grid-row: 3 / 4;
+  align-self: flex-start;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.todo-list li {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.todo-list li > button {
+  all: unset;
+  transition: 0.2s linear;
+}
+.todo-list li > button:hover,
+.todo-list li > button:active {
+  cursor: pointer;
+  transform: scale(0.87);
+}

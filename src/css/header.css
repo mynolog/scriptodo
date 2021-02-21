@@ -3,7 +3,7 @@
   height: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr 2fr;
+  grid-template-rows: 1fr 4fr;
   padding: 10px;
 }
 
@@ -58,6 +58,9 @@
   background-color: transparent;
   border-radius: 50%;
   box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+}
+.clock-switch:hover {
+  cursor: pointer;
 }
 .clock-switch:checked {
   border-color: #4ed164;
