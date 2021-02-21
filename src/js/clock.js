@@ -1,7 +1,9 @@
 const clockContainer = document.querySelector(".js-clock");
 const clockMode = document.querySelector(".js-clock-mode");
-const clockTitle = clockContainer.querySelector("h1");
-const dateTitle = clockContainer.querySelector("h2");
+const clockTitle = clockContainer.querySelector(".js-clock-title");
+const clockSubtitle = clockContainer.querySelector(".js-clock-subtitle");
+const clockSecond = clockContainer.querySelector(".js-clock-second");
+const dateTitle = clockContainer.querySelector("h3");
 
 const CLOCK_MODE_LS = "is24Hours";
 let is24HoursClock;
@@ -32,12 +34,12 @@ const getCurrentTime = () => {
   const minutes = date.getMinutes();
   const seconds = date.getSeconds();
   if (is24HoursClock) {
-    clockTitle.innerText = `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
+    clockTitle.innerText = `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}`;
   } else {
-    clockTitle.innerText = `${hours > 11 ? `PM ${hours - 12}` : `AM ${hours}`}:${minutes < 10 ? `0${minutes}` : minutes}:${
-      seconds > 9 ? seconds : `0${seconds}`
-    }`;
+    clockTitle.innerText = `${hours > 12 ? `${hours - 12}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}`;
+    clockSubtitle.innerText = `${hours > 11}` ? "PM" : "AM";
   }
+  clockSecond.innerText = `${seconds < 10 ? `0${seconds}` : seconds}`;
 };
 
 const getCurrentDate = () => {
