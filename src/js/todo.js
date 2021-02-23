@@ -31,17 +31,16 @@ const paintToDo = (text) => {
 
   const newId = toDos.length + 1;
   li.id = newId;
-  toDoList.appendChild(li);
   const toDoObj = {
     text,
     id: newId,
   };
   if (toDos.length < 7) {
-    console.log(toDos.length);
+    toDoList.appendChild(li);
     toDos.push(toDoObj);
     saveToDos();
   } else {
-    alert("욕심쟁이");
+    alert("할 일은 최대 7개까지만 등록할 수 있어요. :)");
   }
   toDoInput.placeholder = "Write a to do";
 };
