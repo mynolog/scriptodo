@@ -1,4 +1,4 @@
-# [scripTODO]{:target="_blank"}
+# <a href="https://minholeelog.github.io/scriptodo/" target="_blank">scripTODO</a>
 
 💬 투두 리스트를 만들면서 로컬 스토리지를 활용하는 방법을 익힌다.
 
@@ -13,7 +13,5 @@
 - [ ] : 페이지 불러오기 없이 시계 모드 변경 
 
 ### 🎃 구경하기
+<a href="https://minholeelog.github.io/scriptodo/" target="_blank">scripTODO</a>
 
-[scripTODO]{:target="_blank"}
-
-[scriptodo]: https://minholeelog.github.io/scriptodo/
