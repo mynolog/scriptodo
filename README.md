@@ -4,13 +4,13 @@
 
 ### 📑 계획
 
-- [x] : Clock
-- [x] : Todo list
+- [x] : 시계
+- [x] : 투두 리스트
 - [x] : Weather API
-- [x] : Random Background images
-- [x] : 스타일 완성
+- [x] : 무작위 배경 이미지
 - [ ] : 반응형 레이아웃
 - [ ] : CSS 애니메이션
+- [ ] : 페이지 불러오기 없이 시계 모드 변경 
 
 ### 🎃 구경하기
 
