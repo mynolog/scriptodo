@@ -5,6 +5,11 @@ const greeting = document.querySelector(".js-greetings");
 const USER_LS = "currentUser";
 const SHOWING = "showing";
 
+const getCurrentHour = () => {
+  const date = new Date();
+  return date.getHours();
+};
+
 const saveName = (userName) => {
   localStorage.setItem(USER_LS, userName);
 };
@@ -24,7 +29,17 @@ const askName = () => {
 const paintGreeting = (userName) => {
   nameForm.classList.remove(SHOWING);
   greeting.classList.add(SHOWING);
-  greeting.innerText = `Hello ${userName}`;
+  const currentHour = getCurrentHour();
+  console.log(currentHour);
+  if (currentHour > 6 && currentHour <= 12) {
+    greeting.innerText = `Good morning, ${userName}`;
+  } else if (currentHour > 12 && currentHour <= 18) {
+    greeting.innerText = `Good afternoon, ${userName}`;
+  } else if (currentHour > 18 && currentHour <= 20) {
+    greeting.innerText = `Good evening, ${userName}`;
+  } else {
+    greeting.innerText = `Hello, ${userName}`;
+  }
 };
 
 const loadName = () => {
